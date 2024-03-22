@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>π time!</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@900&family=Rubik+Iso&display=swap">
+  <style>
+    body {
+      font-family: 'Lisu Bosa', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('https://media0.giphy.com/media/xUOrw3Cefz0PcZrLFu/giphy.gif?cid=ecf05e47ypmdfmtq5cwbj42uvzpdxdyy2bxxduiauo2sog3m&ep=v1_gifs_related&rid=giphy.gif&ct=g');
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: white; 
+    }
+  
+    header {
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+  
+    header img {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease; 
+      margin-right: 30px; 
+      margin-left: 30px;
+    }
+  
+    header img:hover {
+      transform: scale(1.1) rotate(360deg); 
+    }
+  
+    nav {
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      margin-right: 20px; 
+    }
+  
+    nav a {
+      color: white; 
+      font-size: 25px; 
+      text-decoration: none; 
+      margin-left: 30px; 
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+      transition: color 0.3s ease, transform 0.1s ease;
+    }
+  
+    nav a:hover {
+      color: #9c3b8f; 
+      transform: translateY(1px); 
+    }
+  
+    h1 {
+      font-family: 'Lisu Bosa', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      text-decoration: underline;
+      color: white; 
+      font-size: 40px;
+    }
+   h2 {
+      font-family: 'Lisu Bosa', sans-serif;
+      font-weight: 900;
+      text-align: center;
+      color: white; 
+      font-size: 30px;
+    }
+  
+    footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+  color: white;
+  font-family: 'Lisu Bosa', sans-serif;
+  text-align: center;
+  padding: 10px 0; /* Add some padding for better visibility */
+  z-index: 100; /* Ensure footer stays on top */
+}
+   
+  </style>
+
+<script>
+    // function to load the PHP content using AJAX
+    function loadPHPContent() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("phpContent").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "countdown.php", true);
+      xhttp.send();
+    }
+
+    // load the PHP content on page load
+    window.onload = loadPHPContent;
+
+   
+  </script>
+
+</head>
+<body>
+
+
+
+
+
+  <footer>© 2024 Stamatia Daramboukas</footer>
+
+
+
+<div id="phpContent">
+
+
+
+
+</body>
+</html>
+

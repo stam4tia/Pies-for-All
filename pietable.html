@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>π table</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@900&family=Rubik+Iso&display=swap">
+ 
+
+<script>
+    // function to load the PHP content using AJAX
+    function loadPHPContent() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("phpContent").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "pietable.php", true);
+      xhttp.send();
+    }
+
+    // load the PHP content on page load
+    window.onload = loadPHPContent;
+  </script>
+
+
+</head>
+<body>
+
+    <div id="phpContent">
+
+
+</body>
+</html>

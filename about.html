@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All About π</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@900&family=Rubik+Iso&display=swap">
+  <style>
+    body {
+      font-family: 'Lisu Bosa', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #612e01;
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: white; 
+    }
+  
+    p{
+        margin: 50px;
+    }
+
+    header {
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+  
+    header img {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      transition: transform 0.3s ease; 
+      margin-right: 30px; 
+      margin-left: 30px;
+    }
+  
+    header img:hover {
+      transform: scale(1.1) rotate(360deg); 
+    }
+  
+    nav {
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      margin-right: 20px;
+    }
+  
+    nav a {
+      color: white; 
+      font-size: 25px; 
+      text-decoration: none; 
+      margin-left: 30px; 
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 5px;
+      transition: color 0.3s ease, transform 0.1s ease;
+    }
+  
+    nav a:hover {
+      color: #9c3b8f; 
+      transform: translateY(1px); 
+    }
+  
+    h1 {
+      font-family: 'Lisu Bosa', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      text-decoration: underline;
+      color: white; 
+      font-size: 40px;
+    }
+   h2 {
+      font-family: 'Lisu Bosa', sans-serif;
+      font-weight: 900;
+      text-align: center;
+      color: white; 
+      font-size: 30px;
+      margin: 50px;
+    }
+
+    p {
+      font-size: 20px;
+
+    }
+
+    .about-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 10px;
+  }
+
+  
+  .about-image {
+    width: 50%;
+    border-radius: 10px;
+    margin-right: 20px; 
+    
+  }
+
+    .about-text {
+    width: 45%; 
+    text-align: left;
+    margin-left: 20px; 
+  }
+
+  .youtube-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin: 50px; 
+    }
+
+    .youtube-video {
+      width: 45%; /* set the width to less than % to allow for some space between videos */
+      box-sizing: border-box; 
+      margin: 10px; /* added margin around each video */
+      border: 5px solid white;
+      border-radius: 15px; 
+
+    }
+
+    footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+ 
+
+  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+  color: white;
+  font-family: 'Lisu Bosa', sans-serif;
+  text-align: center;
+  padding: 10px 0; /* Add some padding for better visibility */
+  z-index: 100; /* Ensure footer stays on top */
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="https://pngimg.com/d/pizza_PNG43991.png" />
+  </a>
+  <nav>
+    <a href="about.html">About</a>
+    <a href="randompie.html">Random Pie</a>
+    <a href="countdown.html" id="countdownLink">Pie Time</a>
+    <a href="pietable.html">Pie Table</a>
+  </nav>
+</header>
+
+<h1> About</h1>
+
+<h2> This website is dedicated to pie lovers and non-pie lovers alike.  It is a website meant to help  you find the perfect pie. This is Pies for All! </h2>
+<div class="about-container">
+  <div class="about-image">
+    <img src="https://media4.giphy.com/media/9OrhCFgQODTnAGhWws/200w.webp?cid=ecf05e47aedlnojr77ozcary37f33ivpt0f9jm3paz54f349&ep=v1_gifs_related&rid=200w.webp&ct=g" alt="Pie Image" style="border-radius: 15px; border: 5px solid white; width: 300px;">
+  </div>
+  <div class="about-text">
+    <h2 style="text-decoration: underline;">History</h2>
+    <p>
+      Pies are thought to have <a href="https://blogs.loc.gov/inside_adams/2011/11/pie%E2%80%A2ology-a-full-filling-story/#:~:text=The%20history%20of%20the%20pie,a%20top%20and%20bottom%20crust." target="_blank" style="color: lightblue;">originated</a> from ancient Greece and Egypt.
+      The ancient Greeks would eat a savory type of pie with meat inside of it, in an open shell. 
+      However, the Romans could have been the first to create a pie that included a top and bottom crust.
+      England saw a rise in popularity for sweet pies in the 16th century. For Example, Queen Elizabeth I was known to have loved cherry pies. 
+      When the English colonized America, they brought their pie recipes with them. 
+      Pies quickly became a staple in New England households, served and enjoyed for breakfast. 
+      The Northern states became known for their pumpkin pies, the Southwest states for their variety of nut pies,
+       the Midwest for their creamy and cheesy pies, and Florida for its key lime pies.
+
+    </p>
+  </div>
+</div>
+
+<div class="youtube-container">
+  <!-- first YouTube video -->
+  <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/0INtEZTUSHY?si=0p_pg-zvgTZRCyif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <!-- second YouTube video -->
+  <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/O2aXNcvnnGo?si=OYnlB4u0og_mEGxD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+<footer>© 2024 Stamatia Daramboukas</footer>
+
+</body>
+</html>
