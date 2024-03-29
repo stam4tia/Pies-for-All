@@ -1,6 +1,6 @@
 <h1>Pies for All</h1>
 
-This website was a final project for Web Development 2 class utilizing:
+This website was a final project for my Web Development 2 class utilizing:
 - the inclusion of backend properties such as MySQL, PHP, and APIs
 - jQuery Ajax requests
   
