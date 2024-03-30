@@ -84,16 +84,28 @@
     }
   
     footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
-  color: white;
-  font-family: 'Lisu Bosa', sans-serif;
-  text-align: center;
-  padding: 10px 0; /* Add some padding for better visibility */
-  z-index: 100; /* Ensure footer stays on top */
+      position: absolute; /* Change from fixed to absolute */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      color: white;
+      font-family: 'Lisu Bosa', sans-serif;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .footer-text {
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    footer a {
+      text-decoration: none;
+    }
+  
+    footer a:hover {
+  color: rgb(0, 200, 255) !important;
 }
    
   </style>
@@ -105,10 +117,10 @@
     <img src="https://pngimg.com/d/pizza_PNG43991.png" />
   </a>
   <nav>
-  <a href="about.html">About</a>
-    <a href="randompie.html">Random Pie</a>
-    <a href="countdown.html" id="countdownLink">Pie Time</a>
-    <a href="pietable.html">Pie Table</a>
+  <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='randompie.html'">Random Pie</button>
+    <button onclick="window.location.href='countdown.html'" id="countdownLink">Pie Time</button>
+    <button onclick="window.location.href='pietable.html'">Pie Table</button>
   </nav>
 </header>
 
@@ -141,11 +153,6 @@ echo "<h2>Countdown to Pi Day: $daysUntilMarch14 days!</h2>";
 
 </body>
 </html>
-
-
-
-
-
 
 
 
