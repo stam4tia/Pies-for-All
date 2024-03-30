@@ -18,6 +18,7 @@
       flex-direction: column;
       min-height: 100vh;
       color: white; 
+      position: relative; 
     }
   
     header {
@@ -43,41 +44,44 @@
   
     nav {
       display: flex;
-      justify-content: flex-end; /* align items to the right */
+      justify-content: flex-end; 
       align-items: center;
       margin-right: 20px; 
     }
   
-    nav a {
-      color: white; 
-      font-size: 25px; 
-      text-decoration: none; 
-      margin-left: 30px;
-      cursor: pointer;
-      border: none;
-      background: none;
-      padding: 5px;
-      transition: color 0.3s ease, transform 0.1s ease;
-    }
-  
-    nav a:hover {
-      color: #9c3b8f; 
-      transform: translateY(1px); /* add a slight pressing animation */
-    }
+    nav button {
+  font-family: 'Lisu Bosa', sans-serif;
+  color: #ffb4e5; 
+  font-size: 23px; 
+  text-decoration: none; 
+  margin-left: 20px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255); 
+  background-color: rgba(0, 0, 0, 0.3); 
+  padding: 10px 20px; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  border-radius: 15px; 
+}
+
+nav button:hover {
+  background-color: #9c3b8f; 
+  color: #ffffff;
+  transform: translateY(1px);
+}
+
 
   
     h1 {
-  font-family: 'Lisu Bosa', sans-serif;
-  font-weight: 900;
-  font-style: italic;
-  text-align: center;
-  text-decoration: underline;
-  color: rgb(255, 255, 255);
-  font-size: 40px;
-  /* margin-top: auto; */
-  /* margin-bottom: auto; */
-}
-   h2 {
+      font-family: 'Lisu Bosa', sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      text-align: center;
+      text-decoration: underline;
+      color: rgb(255, 255, 255);
+      font-size: 40px;
+    }
+  
+    h2 {
       font-family: 'Lisu Bosa', sans-serif;
       font-weight: 900;
       text-align: center;
@@ -86,18 +90,30 @@
     }
   
     footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
-  color: white;
-  font-family: 'Lisu Bosa', sans-serif;
-  text-align: center;
-  padding: 10px 0; /* Add some padding for better visibility */
-  z-index: 100; /* Ensure footer stays on top */
-}
-   
+      position: absolute; 
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-family: 'Lisu Bosa', sans-serif;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .footer-text {
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    footer a {
+      text-decoration: none;
+    }
+  
+    footer a:hover {
+      color: rgb(0, 200, 255) !important; 
+    }
   </style>
 </head>
 <body>
@@ -107,25 +123,20 @@
     <img src="https://pngimg.com/d/pizza_PNG43991.png" />
   </a>
   <nav>
-    <a href="about.html">About</a>
-    <a href="randompie.html">Random Pie</a>
-    <a href="countdown.html" id="countdownLink">Pie Time</a>
-    <a href="pietable.html">Pie Table</a>
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='randompie.html'">Random Pie</button>
+    <button onclick="window.location.href='countdown.html'" id="countdownLink">Pie Time</button>
+    <button onclick="window.location.href='pietable.html'">Pie Table</button>
   </nav>
 </header>
 
-<h1>
-  
-  
-  
-  
-  Pies for All</h1>
+ <h1>Pies for All</h1>
 
-
-
-
-  <footer>© 2024 Stamatia Daramboukas</footer>
-
+<footer>
+  <div class="footer-text">
+    <a href="https://github.com/stam4tia" target="_blank" style="text-decoration: none; color: #ffffff;">© 2024 Stamatia Daramboukas</a>
+  </div>
+</footer>
 
 </body>
 </html>
