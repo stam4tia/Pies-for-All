@@ -52,22 +52,26 @@
       margin-right: 20px;
     }
   
-    nav a {
-      color: white; 
-      font-size: 25px; 
-      text-decoration: none; 
-      margin-left: 30px; 
-      cursor: pointer;
-      border: none;
-      background: none;
-      padding: 5px;
-      transition: color 0.3s ease, transform 0.1s ease;
-    }
-  
-    nav a:hover {
-      color: #9c3b8f; 
-      transform: translateY(1px); 
-    }
+    nav button {
+  font-family: 'Lisu Bosa', sans-serif;
+  color: #ffb4e5; 
+  font-size: 23px; 
+  text-decoration: none; 
+  margin-left: 20px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 255, 255); 
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  border-radius: 15px; 
+}
+
+nav button:hover {
+  background-color: #9c3b8f; 
+  color: #ffffff; 
+  transform: translateY(1px);
+}
+
   
     h1 {
       font-family: 'Lisu Bosa', sans-serif;
@@ -93,11 +97,12 @@
     }
 
     .about-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 10px;
-  }
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 15px 20px;
+}
+
 
   
   .about-image {
@@ -107,11 +112,25 @@
     
   }
 
-    .about-text {
-    width: 45%; 
-    text-align: left;
-    margin-left: 20px; 
-  }
+  .about-text {
+  width: 40%;
+  max-height: 300px;
+  overflow-y: auto;
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid white;
+  border-radius: 15px;
+  background-image: url('https://img.freepik.com/premium-vector/green-plaid-gingham-checkered-tartan-pattern-background-perfect-wallpaper-backdrop-postcard_565280-227.jpg');
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5); 
+  color: black;
+}
+
+.about-text h2 {
+  color: black;
+}
+
 
   .youtube-container {
       display: flex;
@@ -130,19 +149,40 @@
     }
 
     footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  width: 100%;
- 
+      position: relative; 
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
 
-  /* background-color: rgba(0, 0, 0, 0.5); Semi-transparent background */
+      color: white;
+      font-family: 'Lisu Bosa', sans-serif;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .footer-text {
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
+    }
+  
+    footer a {
+      text-decoration: none;
+    }
+  
+    footer a:hover {
+      color: rgb(0, 200, 255) !important; 
+    }
+ 
+/* 
+  background-color: rgba(0, 0, 0, 0.5); Semi-transparent background
   color: white;
   font-family: 'Lisu Bosa', sans-serif;
   text-align: center;
   padding: 10px 0; /* Add some padding for better visibility */
-  z-index: 100; /* Ensure footer stays on top */
-}
+  /* z-index: 100; Ensure footer stays on top */
+   
 
   </style>
 </head>
@@ -153,10 +193,11 @@
     <img src="https://pngimg.com/d/pizza_PNG43991.png" />
   </a>
   <nav>
-    <a href="about.html">About</a>
-    <a href="randompie.html">Random Pie</a>
-    <a href="countdown.html" id="countdownLink">Pie Time</a>
-    <a href="pietable.html">Pie Table</a>
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='randompie.html'">Random Pie</button>
+    <button onclick="window.location.href='countdown.html'" id="countdownLink">Pie Time</button>
+    <button onclick="window.location.href='pietable.html'">Pie Table</button>
+
   </nav>
 </header>
 
@@ -170,7 +211,7 @@
   <div class="about-text">
     <h2 style="text-decoration: underline;">History</h2>
     <p>
-      Pies are thought to have <a href="https://blogs.loc.gov/inside_adams/2011/11/pie%E2%80%A2ology-a-full-filling-story/#:~:text=The%20history%20of%20the%20pie,a%20top%20and%20bottom%20crust." target="_blank" style="color: lightblue;">originated</a> from ancient Greece and Egypt.
+      Pies are thought to have <a href="https://blogs.loc.gov/inside_adams/2011/11/pie%E2%80%A2ology-a-full-filling-story/#:~:text=The%20history%20of%20the%20pie,a%20top%20and%20bottom%20crust." target="_blank" style="color: blue; text-decoration: underline;">originated</a> from ancient Greece and Egypt.
       The ancient Greeks would eat a savory type of pie with meat inside of it, in an open shell. 
       However, the Romans could have been the first to create a pie that included a top and bottom crust.
       England saw a rise in popularity for sweet pies in the 16th century. For Example, Queen Elizabeth I was known to have loved cherry pies. 
@@ -189,7 +230,11 @@
   <!-- second YouTube video -->
   <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/O2aXNcvnnGo?si=OYnlB4u0og_mEGxD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<footer>© 2024 Stamatia Daramboukas</footer>
-
+<footer>
+  <div class="footer-text">
+    <a href="https://github.com/stam4tia" target="_blank" style="text-decoration: none; color: #ffffff;">© 2024 Stamatia Daramboukas</a>
+  </div>
+</footer>
 </body>
 </html>
+
