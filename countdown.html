@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>π time!</title>
+  <title>π Time!</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@900&family=Rubik+Iso&display=swap">
   <style>
     body {
@@ -19,7 +19,7 @@
       min-height: 100vh;
       color: white; 
     }
-  
+
     header {
       text-align: center;
       padding: 10px;
@@ -27,7 +27,7 @@
       justify-content: space-between; 
       align-items: center;
     }
-  
+
     header img {
       width: 100px;
       height: 100px;
@@ -36,37 +36,37 @@
       margin-right: 30px; 
       margin-left: 30px;
     }
-  
+
     header img:hover {
       transform: scale(1.1) rotate(360deg); 
     }
-  
+
     nav {
       display: flex;
       justify-content: flex-end; 
       align-items: center;
       margin-right: 20px; 
     }
-  
-    nav button {
-  font-family: 'Lisu Bosa', sans-serif;
-  color: #ffb4e5; 
-  font-size: 23px; 
-  text-decoration: none; 
-  margin-left: 20px;
-  cursor: pointer;
-  border: 2px solid rgb(255, 255, 255);
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px 20px; 
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
-  border-radius: 15px; 
-}
 
-nav button:hover {
-  background-color: #9c3b8f; 
-  color: #ffffff; 
-  transform: translateY(1px);
-}
+    nav button {
+      font-family: 'Lisu Bosa', sans-serif;
+      color: #ffb4e5; 
+      font-size: 23px; 
+      text-decoration: none; 
+      margin-left: 20px;
+      cursor: pointer;
+      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 20px; 
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+      border-radius: 15px; 
+    }
+
+    nav button:hover {
+      background-color: #9c3b8f; 
+      color: #ffffff; 
+      transform: translateY(1px);
+    }
 
     h1 {
       font-family: 'Lisu Bosa', sans-serif;
@@ -77,14 +77,20 @@ nav button:hover {
       color: white; 
       font-size: 40px;
     }
-   h2 {
-      font-family: 'Lisu Bosa', sans-serif;
-      font-weight: 900;
-      text-align: center;
-      color: white; 
-      font-size: 30px;
+
+    /* Wrap countdown in a container */
+    .countdown-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px; /* Set a height to vertically center */
     }
-  
+
+    #countdown {
+      font-size: 60px; /* Make countdown text larger */
+      font-weight: bold;
+    }
+
     footer {
       position: fixed; 
       bottom: 0;
@@ -97,56 +103,70 @@ nav button:hover {
       padding: 10px 0;
     }
   
-    .footer-text a {
-      text-decoration: none;
-      color: inherit;
+    .footer-text {
+      color: #ffffff;
+      font-size: 17px;
+      text-align: center;
     }
   
-    .footer-text a:hover {
-      color: rgb(0, 200, 255);
+    footer a {
+      text-decoration: none;
     }
+  
+    footer a:hover {
+      color: rgb(0, 200, 255) !important; 
+    }
+
   </style>
-
-<script>
-    // function to load the PHP content using AJAX
-    function loadPHPContent() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("phpContent").innerHTML = this.responseText;
-        }
-      };
-      xhttp.open("GET", "countdown.php", true);
-      xhttp.send();
-    }
-
-    // load the PHP content on page load
-    window.onload = loadPHPContent;
-  </script>
-
 </head>
 <body>
- 
 
-  <!-- Main content section -->
-  <main>
-    <!-- Main content -->
-    <div id="phpContent"></div>
-  </main>
+<header>
+  <a href="index.html">
+    <img src="https://pngimg.com/d/pizza_PNG43991.png" />
+  </a>
+  <nav>
+    <button onclick="window.location.href='about.html'">About</button>
+    <button onclick="window.location.href='randompie.html'">Random Pie</button>
+    <button onclick="window.location.href='countdown.html'">Pie Time</button>
+    <button onclick="window.location.href='pietable.html'">Pie Table</button>
+  </nav>
+</header>
 
-  <!-- Footer section -->
-  <footer>
+<h1>Pie Time Countdown</h1>
+<div class="countdown-container">
+  <p id="countdown"></p>
+</div>
+
+<script>
+ function updateCountdown() {
+    const now = new Date();
+    const currentYear = now.getFullYear();
+    let piDay = new Date(currentYear, 2, 14, 0, 0, 0);
+    
+    if (now > piDay) {
+      piDay = new Date(currentYear + 1, 2, 14, 0, 0, 0);
+    }
+    
+    const diff = piDay.getTime() - now.getTime();
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+    
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s until Pi Day!`;
+  }
+  
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+</script>
+
+<footer>
     <div class="footer-text">
-      <a href="https://github.com/stam4tia" target="_blank">© 2024 Stamatia D</a>
+      <a href="https://github.com/stam4tia" target="_blank" style="text-decoration: none; color: #ffffff;">© 2025 Stamatia D</a>
     </div>
   </footer>
-</body>
-</html>
-
-
-
-
 
 </body>
 </html>
-
